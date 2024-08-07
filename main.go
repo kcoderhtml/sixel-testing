@@ -159,6 +159,6 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 func (m model) View() string {
-	s := fmt.Sprintf("Your term is %s\nYour window size is %dx%d\nBackground: %s\nColor Profile: %s\nSixel: %s\n", m.term, m.width, m.height, m.bg, m.profile, SixelEncode())
+	s := fmt.Sprintf("Your term is %s\nYour window size is %dx%d\nBackground: %s\nColor Profile: %s\nSixel:\n%s", m.term, m.width, m.height, m.bg, m.profile, SixelEncode())
 	return m.txtStyle.Render(s) + "\n\n" + m.quitStyle.Render("Press 'q' to quit\n")
 }
